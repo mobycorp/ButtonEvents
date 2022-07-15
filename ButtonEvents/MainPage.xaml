@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:fonts="clr-namespace:MobyClient.Infrastructure"
+	x:Class="ButtonEvents.MainPage">
+	<Grid
+		ColumnDefinitions="1*, 250, 1*"
+		ColumnSpacing="10"
+		RowDefinitions="1*, 150, 35, 1*">
+		<Label
+			Grid.Column="1"
+			Grid.Row="1"
+			LineBreakMode="WordWrap"
+			Text="&lt;b&gt;Method one&lt;/b&gt;&lt;br&gt;This button executes event handlers for the Button_Pressed and Button_Released events. This works, but I don't get mouse over effects..."
+			TextType="Html" />
+		<Button
+			Grid.Column="1"
+			Grid.Row="2"
+			BackgroundColor="Green"
+			CornerRadius="0"
+			HeightRequest="30"
+			HorizontalOptions="Center"
+			Padding="8,2"
+			Pressed="Button_Pressed"
+			Released="Button_Released"
+			Text="Testing"
+			TextColor="White"
+			VerticalOptions="Center">
+			<Button.ImageSource>
+				<FontImageSource
+					FontFamily="FaLight"
+					Glyph="{x:Static fonts:FontAwesomeLight.FolderPlus}"
+					Size="{StaticResource SizeTabIcon}"
+					Color="White" />
+			</Button.ImageSource>
+		</Button>
+	</Grid>
+</ContentPage>
